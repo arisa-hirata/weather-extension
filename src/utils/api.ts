@@ -1,4 +1,4 @@
-const OPEN_WEATHER_API_KEY = 'e1ec43e71a98cc14a4799aabd7b70c27';
+const OPEN_WEATHER_API_KEY = process.env.REACT_APP_API_KEY;
 
 export interface OpenWeatherData {
 	name: string
@@ -31,6 +31,6 @@ export async function fetchOpenWeatherData(city: string): Promise<any> {
 		throw new Error('City not found')
 	}
 
-	const data: OpenWeatherData = await res.json()
+	const data: OpenWEatherData = await res.json()
 	return data
 }
