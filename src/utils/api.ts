@@ -31,6 +31,6 @@ export async function fetchOpenWeatherData(city: string): Promise<any> {
 		throw new Error('City not found')
 	}
 
-	const data: OpenWEatherData = await res.json()
+	const data: OpenWeatherData = await res.json()
 	return data
 }
