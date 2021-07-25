@@ -1,4 +1,4 @@
-const OPEN_WEATHER_API_KEY = process.env.REACT_APP_API_KEY;
+const OPEN_WEATHER_API_KEY =  process.env.REACT_APP_API_KEY;
 
 export interface OpenWeatherData {
 	name: string
@@ -21,6 +21,8 @@ export interface OpenWeatherData {
 		speed: number
 	}
 }
+
+export type OpenWeatherTempScale = 'metric' | 'imperial'
 
 export async function fetchOpenWeatherData(city: string): Promise<any> {
 	const res = await fetch(
