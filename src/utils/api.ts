@@ -1,5 +1,4 @@
 const OPEN_WEATHER_API_KEY = process.env.REACT_APP_API_KEY;
-
 export interface OpenWeatherData {
 	name: string
 	main: {
